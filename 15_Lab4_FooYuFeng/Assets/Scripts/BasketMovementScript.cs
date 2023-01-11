@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BasketMovementScript : MonoBehaviour
 {
+    public string switcSceneName;
     public Text scoreText;
 
     public float speed;
@@ -43,7 +45,7 @@ public class BasketMovementScript : MonoBehaviour
         }
         else if (other.gameObject.tag == "Unhealthy")
         {
-            Debug.Log("hit U");
+            SceneManager.LoadScene(switcSceneName);
         }
     }
 }

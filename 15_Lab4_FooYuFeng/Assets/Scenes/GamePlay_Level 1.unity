@@ -374,6 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf1f9f26821f4be59f380600ae4018d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switcSceneName: GameLoseScene
   scoreText: {fileID: 1973211882}
   speed: 5
   score: 0
