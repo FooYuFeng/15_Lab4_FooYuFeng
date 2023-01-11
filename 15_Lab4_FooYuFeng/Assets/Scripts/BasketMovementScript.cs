@@ -28,4 +28,16 @@ public class BasketMovementScript : MonoBehaviour
             transform.position = new Vector3(-7, transform.position.y, transform.position.z);
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Healthy")
+        {
+            Debug.Log("hit H");
+        }
+        else if (other.gameObject.tag == "Unhealthy")
+        {
+            Debug.Log("hit U");
+        }
+    }
 }
