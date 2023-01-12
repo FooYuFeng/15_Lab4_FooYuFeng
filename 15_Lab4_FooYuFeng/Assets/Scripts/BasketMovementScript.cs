@@ -9,8 +9,10 @@ public class BasketMovementScript : MonoBehaviour
     public string switcSceneWin;
     public string switcSceneLose;
     public int scoreToWin;
+    public float timer;
 
     public Text scoreText;
+    public Text timerText;
 
     public float speed;
     public int score;
@@ -35,6 +37,16 @@ public class BasketMovementScript : MonoBehaviour
         else if (transform.position.x < -7)
         {
             transform.position = new Vector3(-7, transform.position.y, transform.position.z);
+        }
+
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            SceneManager.LoadScene(switcSceneLose);
+        }
+        else
+        {
+            timerText.text = "Time Left: " + (int)timer;
         }
     }
 
