@@ -1,0 +1,21 @@
+BGM:
+	Level 1 music:
+	https://opengameart.org/content/medieval-exploration
+
+	Level 2 music:
+	https://opengameart.org/content/medieval-kings-feast
+
+	WinScene music:
+	https://opengameart.org/content/medieval-the-old-tower-inn
+
+	LoseScene music:
+	https://opengameart.org/content/medieval-the-bards-tale
+
+
+Sound Effects:
+	https://opengameart.org/content/level-up-power-up-coin-get-13-sounds
+	-Collection Sound (Coin01)
+
+	https://opengameart.org/content/gui-sound-effects
+	-Spawn Sound (click)
+	-BadCollection Sound (negative_2)

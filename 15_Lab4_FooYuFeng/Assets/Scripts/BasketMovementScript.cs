@@ -11,6 +11,9 @@ public class BasketMovementScript : MonoBehaviour
     public int scoreToWin;
     public float timer;
 
+    public AudioSource soundAudio;
+    public AudioClip collectSound;
+
     public Text scoreText;
     public Text timerText;
 
@@ -56,11 +59,14 @@ public class BasketMovementScript : MonoBehaviour
         {
             score += 10;
             scoreText.text = "Score: " + score + " / " + scoreToWin;
-
             if (score >= scoreToWin)
             {
                 SceneManager.LoadScene(switcSceneWin);
                 return;
+            }
+            else
+            {
+                soundAudio.PlayOneShot(collectSound);
             }
 
             Destroy(other.gameObject);
