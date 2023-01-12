@@ -374,7 +374,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaf1f9f26821f4be59f380600ae4018d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcSceneName: GameLoseScene
+  switcSceneWin: GameWinScene
+  switcSceneLose: GameLoseScene
+  scoreToWin: 100
   scoreText: {fileID: 1973211882}
   speed: 5
   score: 0
@@ -389,8 +391,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.2436204, y: 4.216748, z: 0.2}
-  m_Center: {x: 0.0018098354, y: 0.058374405, z: 0}
+  m_Size: {x: 7.2436204, y: 3, z: 2}
+  m_Center: {x: 0.0018098354, y: -0.2, z: 0}
 --- !u!54 &749641441
 Rigidbody:
   m_ObjectHideFlags: 0

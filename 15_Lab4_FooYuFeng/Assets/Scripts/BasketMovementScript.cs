@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class BasketMovementScript : MonoBehaviour
 {
-    public string switcSceneName;
+    public string switcSceneWin;
+    public string switcSceneLose;
+    public int scoreToWin;
+
     public Text scoreText;
 
     public float speed;
@@ -15,7 +18,7 @@ public class BasketMovementScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        scoreText.text = "Score: " + score + " / " + scoreToWin;
     }
 
     // Update is called once per frame
@@ -35,17 +38,24 @@ public class BasketMovementScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Healthy")
         {
             score += 10;
-            scoreText.text = "Score: " + score;
+            scoreText.text = "Score: " + score + " / " + scoreToWin;
+
+            if (score >= scoreToWin)
+            {
+                SceneManager.LoadScene(switcSceneWin);
+                return;
+            }
+
             Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "Unhealthy")
         {
-            SceneManager.LoadScene(switcSceneName);
+            SceneManager.LoadScene(switcSceneLose);
         }
     }
 }
